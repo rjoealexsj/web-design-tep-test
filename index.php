@@ -1,0 +1,266 @@
+<?php 
+
+if(isset($_POST['submit'])){
+	 
+    $to = "rjoealexander@gmail.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $name = $_POST['name'];
+	echo $from;
+	echo $name;
+    $subject = "Idntica Query";
+    $subject2 = "Copy of your Idntica Query";
+    $message = $name . "(" . $from . ")" . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your Idntica Query. Thank You for contacting us. We will reach you soon. BY TEAM IDNTICA " . $name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+ 	header("Location:index.php");
+}
+?>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>idntica</title>
+
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="idntica">
+		<meta name="description" content="web and app developement">
+
+		<!-- animate -->
+		<link rel="stylesheet" href="css/animate.min.css">
+		<!-- bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- font-awesome -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- google font -->
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
+		<!-- custom -->
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+
+		<!-- start navigation -->
+		<div class="navbar navbar-fixed-top navbar-default" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand"><img src="images/logoidntica1.png" class="img-responsive"  alt="logo"></a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#home" class="smoothScroll">HOME</a></li>
+						
+						<li><a href="#about" class="smoothScroll">ABOUT</a></li>
+	
+					
+						
+						<li><a href="#contact" class="smoothScroll">CONTACT</a></li>
+					</ul>
+                    
+				</div>
+			</div>
+		</div>
+		<!-- end navigation -->
+
+		<!-- start home -->
+		<section id="home" class="text-center">
+		  <div class="templatemo_headerimage">
+		    <div class="flexslider">
+		      <ul class="slides">
+		        <li>
+		        	<img src="images/slider/flexslider1.jpg" alt="Slide 1">
+		        	<div class="slider-caption">
+					    <div class="templatemo_homewrapper">
+					      <h1 class="wow fadeInDown" data-wow-delay="2000">carring your identity </h1>
+					      <h2 class="wow fadeInDown" data-wow-delay="2000">
+							<span> </span>
+						</h2><p> Designing your website, application or any product. </p>
+						<a href="#service" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000">Our Work</a>	
+					    </div>
+				  	</div>
+		        </li>
+		        <li>
+		        	<img src="images/slider/flexslider2.jpg" alt="Slide 2">
+		        	<div class="slider-caption">
+					    <div class="templatemo_homewrapper">
+					      <h1 class="wow fadeInDown" data-wow-delay="2000"></h1>
+					      <h2 class="wow fadeInDown" data-wow-delay="2000">
+							<span>We design, code & care </span>
+						</h2>
+						<p>24/7 availability of your websites</p>
+						<a href="#about" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000">See about us</a>	
+					    </div>
+				  	</div>
+		        </li>
+		      </ul>
+		    </div>
+		  </div>				
+		</section>
+		<!-- end home -->
+
+		
+
+		
+
+		<!-- start about -->
+		<div id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay="0.9s">
+						<h3>About idntica</h3>
+						<h4>Easy, Available and Best Price Sollution</h4>
+						<p>idntica cares your identity which can be your website, application or any product.</p>
+						<p>We design, code & care for 24/7 availability of your websites. Your express yourself and we design your expression into solution.</p>
+					</div>
+					<div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.9s">
+						<span class="text-top">Web Design <small>100%</small></span>
+							<div class="progress">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+							</div>
+						<span>Multimedia <small>70%</small></span>
+							<div class="progress">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+							</div>
+						<span>Search Engine Marketing <small>60%</small></span>
+							<div class="progress">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+							</div>
+						<span>Custom Branding <small>60%</small></span>
+							<div class="progress">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end about -->
+
+		<!-- start divider -->
+		<div id="divider">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-1 col-sm-1"></div>
+					<div class="col-md-8 col-sm-8">
+						<h2 class="wow bounce">We provide <strong>Tech Solutions</strong></h2>
+						<h3 class="wow fadeIn" data-wow-delay="0.6s"><mark>Creative</mark> Designers &amp; <mark>Talented</mark> Developers</h3>
+						<p class="wow fadeInUp" data-wow-delay="0.9s">Every website is a process of an evolution. It is a begining of a big dream and our designers make it come true. WE PROVIDE YOU - YOUR DREAM.</p>
+					</div>
+					<div class="col-md-2 col-sm-2"></div>
+				</div>
+			</div>
+		</div>
+		<!-- end divider -->
+
+		
+
+		
+
+		<!-- start contact -->
+		<div id="contact">
+			<div class="container">
+            
+            
+				<div class="row" >
+					<div class="col-md-3 col-sm-4 wow fadeInLeft" data-wow-delay="0.6s">
+					
+                        
+                        <div id="copyright">
+					<p></p>
+                    </div>
+            </div>
+                      <div class="col-md-3 col-sm-4 wow fadeIn" data-wow-delay="0.9s">
+					 
+                        
+					 <div id="copyright">
+					<p><br><br><br><br><br><br><br><br><br><br><br><br>Copyright &copy; 2019 idntica.com </p>
+                    </div>
+                    
+                  </div>
+                
+                    <div>
+					<form action="" method="post" class="col-md-6 col-sm-4" id="contact-form" role="form">
+							<div class="col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.3s">
+								<input name="name" type="text" class="form-control" id="name" placeholder="Name">
+							</div>
+							<div class="col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.3s">
+								<input name="email" type="email" class="form-control" id="email" placeholder="Email">
+							</div>
+                            
+							<div class="col-md-12 col-sm-12 wow fadeIn" data-wow-delay="0.9s">
+								<textarea name="message" rows="5" class="form-control" id="message" placeholder="Message"></textarea>
+                                 <ul class="social-icon">
+					    <li><a href="https://www.facebook.com/Idnticacom-388382438623509/" class="fa fa-facebook"></a></li>
+							<li><a href="#" class="fa fa-twitter"></a></li>
+							<li><a href="#" class="fa fa-instagram"></a></li>
+                            <li><a href="#" class="fa fa-google"></a></li>
+                            <li><i class="fa fa-envelope-o too-icon"></i> admin@idntica.com</li>
+						</ul>
+							</div>
+							<div class="col-md-offset-9 col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+								<input name="submit" type="submit" class="form-control" id="submit" value="Send">
+							
+                            
+                            </div>
+          
+					</form>
+                   
+				</div>
+                
+                </div>
+			
+                        </div>
+                        
+		</div>
+		<!-- end contact -->
+		
+		
+
+		<!-- start footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-sm-7">
+						
+						
+					</div>
+					
+				</div>
+			</div>
+		</footer>
+		<!-- end footer -->
+
+
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		<!-- bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- isotope -->
+		<script src="js/isotope.js"></script>
+		<!-- images loaded -->
+   		<script src="js/imagesloaded.min.js"></script>
+   		<!-- wow -->
+		<script src="js/wow.min.js"></script>
+		<!-- smoothScroll -->
+		<script src="js/smoothscroll.js"></script>
+		<!-- jquery flexslider -->
+		<script src="js/jquery.flexslider.js"></script>
+		<!-- custom -->
+		<script src="js/custom.js"></script>
+
+	</body>
+</html>
